@@ -1,0 +1,12 @@
+<ion-view view-title="Search">
+  <ion-content>
+    <label class="item item-input">
+      <input ng-model="query" type="text" ng-model-options="{ debounce: 450 }" ng-change="search(query)" placeholder="Song, Artist, Album ...">
+    </label>
+    <ul class="list">
+      <li class="item" ng-repeat="song in songs">
+        {{song.title}}
+      </li>
+    </ul>
+  </ion-content>
+</ion-view>
